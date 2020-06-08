@@ -9,6 +9,7 @@ pytest = "*"
 sync = "*"
 pytest-cov = "*"
 pytest-django = "*"
+codecov = "*"
 
 [packages]
 django = "*"
