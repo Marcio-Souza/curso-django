@@ -8,6 +8,7 @@ flake8 = "*"
 pytest = "*"
 sync = "*"
 pytest-cov = "*"
+pytest-django = "*"
 
 [packages]
 django = "*"
