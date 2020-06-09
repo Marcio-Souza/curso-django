@@ -9,10 +9,12 @@ pytest = "*"
 sync = "*"
 pytest-cov = "*"
 pytest-django = "*"
+codecov = "*"
 
 [packages]
 django = "*"
 gunicorn = "*"
+python-decouple = "*"
 
 [requires]
 python_version = "3.8"
