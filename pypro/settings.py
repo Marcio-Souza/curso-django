@@ -18,7 +18,6 @@ from functools import partial
 import dj_database_url
 from decouple import config, Csv
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -78,6 +77,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
+
+# Configuração Django Debug Toolbar
+
+INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
+
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
