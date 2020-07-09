@@ -20,7 +20,7 @@ from .base.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
+    path('', home, name='home'),
 ]
 if settings.DEBUG:
     import debug_toolbar
