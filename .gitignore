@@ -135,3 +135,7 @@ pyvenv.config
 
 #Visual Studio
 .vscode
+
+# Postgres files for development
+.pgdata
+docker-compose.yml
