@@ -16,3 +16,4 @@ def video(request, slug):
 
 def indice(request):
     return render(request, 'aperitivos/indice.html', context={'videos': videos})
+
