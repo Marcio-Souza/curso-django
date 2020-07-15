@@ -10,6 +10,7 @@ sync = "*"
 pytest-cov = "*"
 pytest-django = "*"
 codecov = "*"
+model-bakery = "*"
 
 [packages]
 django = "*"
