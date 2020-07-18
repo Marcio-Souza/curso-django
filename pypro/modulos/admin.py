@@ -12,6 +12,7 @@ class ModelAdmin(OrderedModelAdmin):
 
 @admin.register(Aula)
 class AulaAdmin(OrderedModelAdmin):
-    list_display = ('titulo', 'modulo', 'move_up_down_links')
+    list_display = ('titulo', 'modulo', 'order', 'move_up_down_links')
     list_filter = ('modulo',)
+    ordering = ('modulo', 'order')
     prepopulated_fields = {'slug': ('titulo',)}
