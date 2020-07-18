@@ -7,8 +7,8 @@ from pypro.modulos.models import Modulo
 
 
 @pytest.fixture
-def modulos(db):
-    return baker.make(Modulo, 2)
+def videos(db):
+    return [baker.make(Modulo, titulo=s) for s in 'Antes Depois'.split()]
 
 
 @pytest.fixture
