@@ -12,3 +12,4 @@ class Modulo(OrderedModel):
 
     def __str__(self):
         return self.titulo
+
