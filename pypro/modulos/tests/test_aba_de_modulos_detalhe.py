@@ -37,3 +37,8 @@ def test_descricao(resp, modulo: Modulo):
 def test_aula_titulos(resp, aulas):
     for aula in aulas:
         assert_contains(resp, aula.titulo)
+
+
+def test_aula_links(resp, aulas):
+    for aula in aulas:
+        assert_contains(resp, aula.get_absolute_url())
