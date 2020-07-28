@@ -1,9 +1,11 @@
+from typing import List
+
 from django.db.models import Prefetch
 
 from pypro.modulos.models import Modulo, Aula
 
 
-def listar_modulos_ordenados() -> object:
+def listar_modulos_ordenados() -> List[Modulo]:
     """
         Lista todos os modulos ordenados por título
 
