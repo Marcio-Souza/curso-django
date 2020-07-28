@@ -40,7 +40,7 @@ LOGIN_REDIRECT_URL = '/modulos/'
 
 LOGOUT_REDIRECT_URL = '/'
 
-# Application definition
+LOGIN_URL = '/contas/login/'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
