@@ -1,5 +1,5 @@
 {% extends 'base/base.html' %}
-{% load static %}
+{% load i18n static %}
 
 {% block title %}Python Pro - Login{% endblock title %}
 
@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col">
             {% if form.errors %}
-            <p>Your username and password didn't match. Please try again.</p>
+            <p>{% trans 'Your username and password did not match. Please try again.' %}</p>
             {% endif %}
 
             {% if next %}
@@ -20,25 +20,30 @@
             {% endif %}
             {% endif %}
 
+            <h1>Login</h1>
+            <p>Informe suas credenciais</p>
+
             <form method="post" action="{% url 'login' %}">
                 {% csrf_token %}
-                <table>
-                    <tr>
-                        <td>{{ form.username.label_tag }}</td>
-                        <td>{{ form.username }}</td>
-                    </tr>
-                    <tr>
-                        <td>{{ form.password.label_tag }}</td>
-                        <td>{{ form.password }}</td>
-                    </tr>
-                </table>
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td>{{ form.username.label_tag }}</td>
+                            <td>{{ form.username }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ form.password.label_tag }}</td>
+                            <td>{{ form.password }}</td>
+                        </tr>
+                    </table>
+                </div>
 
-                <input type="submit" value="login">
+                <input class="btn btn-primary" type="submit" value="login">
                 <input type="hidden" name="next" value="{{ next }}">
             </form>
 
             {# Assumes you setup the password_reset view in your URLconf #}
-            <p><a href="{% url 'password_reset' %}">Esqueceu sua senha?</a></p>
+            <p><a class="btn btn-light" href="{% url 'password_reset' %}">Esqueceu sua senha?</a></p>
         </div>
     </div>
 </div>
